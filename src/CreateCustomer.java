@@ -33,13 +33,19 @@ public class CreateCustomer {
 		
 		HttpGet httpGet = new HttpGet("https://api.twitter.com/1.1/statuses/mentions_timeline.json?count=20&include_rts=false&trim_user=true");
 		oAuthConsumer.sign(httpGet);
-	//	JSONParser arrayparser = new JSONParser();
-	//	JSONObject jsonobject = (JSONObject);
+		JSONParser arrayparser = new JSONParser();
 		HttpClient httpClient = new DefaultHttpClient();
 		HttpResponse httpResponse = httpClient.execute(httpGet);
 		HttpEntity responseEntity = httpResponse.getEntity();
 	    String response = EntityUtils.toString(responseEntity);
+	    JSONObject jsonobject = (JSONObject) arrayparser.parse(response);
 	    System.out.println(response);
+	    Set<String> keys = json_obj.keySet();
+	    
+	    for (String key : keys) {
+	     System.out.println(key + " : " + json_obj.get(key)); 
+	    }
+	    
         
 	}
 }
