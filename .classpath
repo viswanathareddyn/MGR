@@ -22,5 +22,6 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Users/vreddy/Documents/GitHub/MGR/lib/java-json.jar"/>
 	<classpathentry kind="lib" path="C:/Users/vreddy/Documents/GitHub/MGR/lib/json-simple-1.1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/vreddy/Documents/GitHub/MGR/lib/org.apache.commons.httpclient.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
